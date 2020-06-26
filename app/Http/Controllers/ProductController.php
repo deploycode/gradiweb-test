@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $products=Product::all();
+        return view('product.index',['products'=>$products]);
     }
 
     /**
@@ -34,7 +36,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        return "ok";
+        Product::create($request->all());
+        // flash('Producto registrado con éxito', 'success');
+        return redirect('productos/');
     }
 
     /**
@@ -45,7 +49,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $products=Product::find($id)->firstOrFail();
+        return view('products',['products'=>$products]);
     }
 
     /**
@@ -56,7 +61,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product=Product::find($id);
+        return view('product.edit' , ['product'=> $product]);
     }
 
     /**
@@ -68,7 +74,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product= Product::find($id);
+        $product->fill($request->all());
+        $product->save();
+        //flash('post actualizado satisfactoriamente', 'success');
+        return redirect('productos');
     }
 
     /**
@@ -79,6 +89,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::destroy($id);
+        //flash('post eliminado satisfactoriamente', 'success');
+        return redirect('productos');
     }
 }
