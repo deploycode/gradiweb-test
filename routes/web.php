@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', 'ProductController@index');
+Route::get('/', 'ProductController@home');
 Route::resource('/productos', 'ProductController');

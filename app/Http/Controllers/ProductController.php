@@ -12,6 +12,17 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function home()
+    {
+        $products=Product::all();
+        return view('home',['products'=>$products]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $products=Product::all();
