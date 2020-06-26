@@ -7,6 +7,7 @@
         </a>
     <br>
     <br>
+
     <table class="table table-striped">
         <thead>
             <th>ID</th>
@@ -25,10 +26,15 @@
                 <td>{{$product->photo}}</td>
                 <td>{{$product->price}}</td>
                 <td>
+
                     {!!Form::open(['route'=>['productos.destroy',$product->id], 'method'=>'DELETE'])!!}
                     <div class="form-group">
+                        <a href="{{ route('productos.show', $product->id) }}">
+                            <i class="btn btn-info">Ver</i>
+                        </a>
                         <a href="{{ route('productos.edit', $product->id) }}">
-                            <i class="btn btn-info glyphicon glyphicon-pencil">Editar</i></a>
+                            <i class="btn btn-info glyphicon glyphicon-pencil">Editar</i>
+                        </a>
                         {!! Form::button('<span class="glyphicon glyphicon-trash">Eliminar</span>', ['type' => 'submit', 'class'=>'btn btn-danger']) !!}
                     </div>
                     {!!Form::close()!!}
@@ -37,4 +43,5 @@
         @endforeach
         </tbody>
     </table>
+
 @stop

@@ -60,8 +60,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $products=Product::find($id)->firstOrFail();
-        return view('products',['products'=>$products]);
+        $product=Product::find($id)->firstOrFail();
+        return view('product.show',['product'=>$product]);
     }
 
     /**
