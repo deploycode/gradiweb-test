@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'ProductController@index');
-Route::get('/admin', 'ProductController@create');
+Route::resource('/productos', 'ProductController');
