@@ -30,7 +30,7 @@
                     {!!Form::open(['route'=>['productos.destroy',$product->id], 'method'=>'DELETE'])!!}
                     <div class="form-group">
                         <a href="{{ route('productos.show', $product->id) }}">
-                            <i class="btn btn-info">Ver</i>
+                            <i class="btn btn-primary">Ver</i>
                         </a>
                         <a href="{{ route('productos.edit', $product->id) }}">
                             <i class="btn btn-info glyphicon glyphicon-pencil">Editar</i>
