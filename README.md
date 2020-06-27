@@ -7,9 +7,9 @@ Es necesario PHP >= 7.2.0 ( Laravel Framework 6 )
 
 `composer install`
 
-`php artisan key:generate`
-
 crear una copia del archivo `.env.example` y renombrar como `.env`
+
+`php artisan key:generate`
 
 crear una base de datos por ejemplo: `gabrielrodriguez_db`
 
