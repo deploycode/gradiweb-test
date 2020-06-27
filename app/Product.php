@@ -12,7 +12,7 @@ class Product extends Model
 
     public function setPhotoAttribute($photo){
         if (is_file($photo)) {
-            $new_name= Str::random(10).$photo->getClientOriginalExtension();
+            $new_name= Str::random(15).'.jpg';
             $this->attributes['photo']= $new_name;
             \Storage::disk('public')->put($new_name,\File::get($photo));
         }

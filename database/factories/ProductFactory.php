@@ -9,6 +9,7 @@ $factory->define(Product::class, function (Faker $faker) {
     return [
         'name' => $faker->word,
         'description' => $faker->paragraph,
+        'photo' => $faker->image($dir = '/tmp', $width = 640, $height = 480),
         'price' => $faker->numberBetween($min = 1000, $max = 9000),
     ];
 });
