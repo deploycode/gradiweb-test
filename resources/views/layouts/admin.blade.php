@@ -40,7 +40,7 @@
   </button>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="#">Salir</a>
+      <a class="nav-link" href="{!!URL::to('/')!!}">Salir</a>
     </li>
   </ul>
 </nav>

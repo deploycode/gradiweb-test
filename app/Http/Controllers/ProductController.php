@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function home()
     {
         $products=Product::all();
-        return view('home',['products'=>$products]);
+        return view('homesite',['products'=>$products]);
     }
 
     /**
