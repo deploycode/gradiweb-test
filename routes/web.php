@@ -13,7 +13,6 @@
 
 Route::get('/', 'ProductController@home');
 Route::resource('productos', 'ProductController');
-Route::resource('login', 'LogController');
 
 Auth::routes();
 
