@@ -23,7 +23,7 @@
                 <td>{{ $product->id }}</td>
                 <td>{{$product->name}}</td>
                 <td>{{$product->description}}</td>
-                <td>{{$product->photo}}</td>
+                <td><img src="{{asset('uploads/'.$product->photo)}}" style="max-width:100px;width: auto; height: auto;"></td>
                 <td>{{$product->price}}</td>
                 <td>
 
