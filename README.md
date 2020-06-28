@@ -48,7 +48,15 @@ En sistema Windows el factory puede tener inconvenientes de permisos sobre el di
 
 <p align="center"><img src="https://raw.githubusercontent.com/deploycode/gradiweb-test/develop/public/uploads/Capture.PNG" width="500"></p>
 
+## Otros desarrollos
 
+http://deploycode.co/ (Laravel) <br> 
+http://glaucoma.org.co/ (Symfony) <br>
+http://ambliopia.com.co/ (Laravel) <br>
+http://www.altavision.co/ (Laravel) <br>
+http://www.oftalmologo.com.co/ (Lumen) <br>
+http://examenesdiagnosticos.com.co/ (Laravel) <br>
+http://www.hablemosdesalud.com.co/ (Symfony) <br>
 
 
 
